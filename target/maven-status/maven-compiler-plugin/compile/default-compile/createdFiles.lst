@@ -1,0 +1,6 @@
+page_objects\HomePage.class
+page_objects\RegistrationPage.class
+page_objects\BaseObjectPage.class
+page_objects\IngredientTabs.class
+page_objects\PersonalAccountPage.class
+User.class
