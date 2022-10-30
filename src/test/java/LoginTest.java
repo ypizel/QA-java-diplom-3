@@ -1,3 +1,4 @@
+import io.qameta.allure.junit4.DisplayName;
 import page_objects.HomePage;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -6,7 +7,6 @@ import org.openqa.selenium.By;
 
 import static org.junit.Assert.assertTrue;
 import static page_objects.HomePage.*;
-
 
 @RunWith(Parameterized.class)
 public class LoginTest extends BaseChromeUITest{
@@ -31,8 +31,8 @@ public class LoginTest extends BaseChromeUITest{
 
         };
     }
-
     @Test
+    @DisplayName("Авторизация с разными входными данными")
     public void loginTest(){
         createUser(user);
         boolean isSignedIn = new HomePage(driver)

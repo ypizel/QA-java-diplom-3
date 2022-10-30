@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 public class IngredientTabs extends BaseObjectPage {
     public IngredientTabs(WebDriver driver) {
         super(driver);
@@ -40,22 +39,26 @@ public class IngredientTabs extends BaseObjectPage {
         element.click();
         return this;
     }
+
     public IngredientTabs clickFillingTabButton(){
         WebElement element = driver.findElement(fillingsTabButton);
         waitElementToBeClickable(element);
         element.click();
         return this;
     }
+
     public IngredientTabs clickBunTabLocator(){
         WebElement element = driver.findElement(bunTabButton);
         waitElementToBeClickable(element);
         element.click();
         return this;
     }
+
     public boolean isSouseTabSelected(){
         WebElement element = driver.findElement(selectedSousesTab);
         return element.isEnabled();
     }
+
     public boolean isFillingTabSelected(){
         WebElement element = driver.findElement(selectedFillingTab);
         return element.isEnabled();

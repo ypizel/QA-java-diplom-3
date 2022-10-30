@@ -8,7 +8,6 @@ public abstract class BaseObjectPage {
     public BaseObjectPage(WebDriver driver) {
         this.driver = driver;
     }
-
     public abstract Object open();
     public abstract Object open(String url);
 

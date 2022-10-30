@@ -11,13 +11,10 @@ import java.util.Random;
 
 public class RegistrationPage extends BaseObjectPage {
 
-
     public RegistrationPage(WebDriver driver) {
         super(driver);
     }
-
     protected static String URL = "https://stellarburgers.nomoreparties.site/register";
-
     private final By nameField = By.xpath("//label[contains(@class, 'input__placeholder text noselect text_type_main-default') and contains(text(),'Имя')]/parent::div/input");
     private final By emailField = By.xpath("//label[contains(@class, 'input__placeholder text noselect text_type_main-default') and contains(text(),'Email')]/parent::div/input");
     private final By passwordField = By.xpath("//input[contains(@class, 'text input__textfield text_type_main-default') and contains(@type, 'password')]");
@@ -26,9 +23,6 @@ public class RegistrationPage extends BaseObjectPage {
 
     private final By signInPage = By.xpath("//button[contains(@class, 'button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa')]");
 
-
-    //    private final By sighInButton = By.xpath("//button[contains(@class, 'button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa') and contains(text(), 'Войти')");
-//    private final By constructorButton = By.xpath("//p[@class = 'AppHeader_header__linkText__3q_va ml-2' and text()='Конструктор']");
     @Override
     public RegistrationPage open() {
         driver.get(URL);
@@ -99,22 +93,8 @@ public class RegistrationPage extends BaseObjectPage {
         WebElement element = driver.findElement(signInPage);
         waitElementToBeClickable(element);
         return element.isDisplayed();
-
-
     }
 }
-//    public RegistrationPage signIn() {
-//        waitElementToBeClickable();
-//        setEmail()
-//                .setPassword("qwerty12");
-//        return this;
-//    }
 
-//    public boolean isSignedIn(){
-//        WebElement element = driver.findElement(constructorButton);
-//        new WebDriverWait(driver, 6)
-//                .until(ExpectedConditions.visibilityOf(element));
-//        return element.isDisplayed();
-//    }
 
 
