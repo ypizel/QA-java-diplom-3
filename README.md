@@ -1,1 +1,1 @@
-#Here u can see my UI tests i mafвe speсially to show my skills.
+Here u can see my UI tests I made speсially to show my skills.
